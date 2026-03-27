@@ -31,7 +31,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip, not hidden — avoids creating a scroll container */
 }
 
 body {
@@ -42,7 +42,6 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 img {
@@ -64,7 +63,6 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
   line-height: 1.2;
   color: var(--dark-earth);
-  overflow: visible;
 }
 
 .italic-accent {
@@ -92,12 +90,21 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   padding: 20px 56px 24px;
-  border-bottom: var(--border);
   background: var(--linen);
   position: sticky;
   top: 0;
   z-index: 200;
-  overflow: visible;
+}
+
+/* Border as pseudo-element so it is never in the text's line box */
+.site-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: #D8D0C0;
 }
 
 .nav-logo {
@@ -108,8 +115,7 @@ h1, h2, h3 {
   color: var(--dark-earth);
   text-decoration: none;
   white-space: nowrap;
-  line-height: 2;
-  overflow: visible;
+  line-height: 1.5;
 }
 
 .nav-links {
