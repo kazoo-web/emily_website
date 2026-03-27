@@ -31,6 +31,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -41,6 +42,7 @@ body {
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 img {
@@ -60,9 +62,9 @@ h1, h2, h3 {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
-  line-height: 1.08;
+  line-height: 1.2;
   color: var(--dark-earth);
-  padding-bottom: 0.12em;
+  overflow: visible;
 }
 
 .italic-accent {
@@ -89,12 +91,13 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 56px;
+  padding: 20px 56px 24px;
   border-bottom: var(--border);
   background: var(--linen);
   position: sticky;
   top: 0;
   z-index: 200;
+  overflow: visible;
 }
 
 .nav-logo {
@@ -105,8 +108,8 @@ h1, h2, h3 {
   color: var(--dark-earth);
   text-decoration: none;
   white-space: nowrap;
-  line-height: 1.5;
-  padding-bottom: 2px;
+  line-height: 2;
+  overflow: visible;
 }
 
 .nav-links {
@@ -259,7 +262,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   padding: 80px 56px;
-  overflow: hidden;
+  overflow: hidden; /* contain orb layers */
   background: var(--linen);
 }
 
