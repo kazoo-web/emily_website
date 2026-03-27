@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700&family=Spectral:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Spectral:ital,wght@1,300&display=swap');
 
 /* ------------------------------------------------------------
    Custom Properties
@@ -37,7 +37,7 @@ html {
 body {
   background-color: var(--linen);
   color: var(--dark-earth);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
@@ -58,11 +58,12 @@ a {
    Typography helpers
    ------------------------------------------------------------ */
 h1, h2, h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.2;
   color: var(--dark-earth);
+  font-optical-sizing: auto;
 }
 
 .italic-accent {
@@ -74,7 +75,7 @@ h1, h2, h3 {
 }
 
 .eyebrow {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -108,7 +109,7 @@ h1, h2, h3 {
 }
 
 .nav-logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-size: 0.82rem;
   letter-spacing: 0.06em;
@@ -126,7 +127,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -200,7 +201,7 @@ h1, h2, h3 {
 
 .mobile-menu a {
   display: block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-size: 0.78rem;
   text-transform: uppercase;
@@ -225,7 +226,7 @@ h1, h2, h3 {
    ------------------------------------------------------------ */
 .btn {
   display: inline-block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-size: 0.72rem;
   text-transform: uppercase;
@@ -263,60 +264,25 @@ h1, h2, h3 {
    Hero — Landing page
    ------------------------------------------------------------ */
 .hero {
-  position: relative;
   min-height: 88vh;
   display: flex;
   align-items: center;
   padding: 80px 56px;
-  overflow: hidden; /* contain orb layers */
-  background: var(--linen);
-}
-
-/* Orb layers */
-.orb-1,
-.orb-2,
-.orb-3 {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.orb-1 {
-  inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(100,150,138,0.24) 0%, transparent 65%);
-  filter: blur(20px);
-}
-
-.orb-2 {
-  top: -20px;
-  left: 40%;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle at 42% 38%, #F0C880 0%, #C07830 40%, #6A3010 70%, transparent 90%);
-  opacity: 0.44;
-  filter: blur(38px);
-}
-
-.orb-3 {
-  top: 30px;
-  left: 55%;
-  width: 110px;
-  height: 110px;
-  background: radial-gradient(circle, #FDF4E0 0%, #F0D8A0 60%, transparent 100%);
-  opacity: 0.5;
-  filter: blur(14px);
+  background:
+    radial-gradient(ellipse 85% 130% at 100% 50%, #C8924A 0%, #DDB46A 20%, #EDD098 45%, transparent 70%),
+    radial-gradient(ellipse 55% 90% at 95% 5%, rgba(200, 140, 55, 0.45) 0%, transparent 55%),
+    #F0E8DA;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
   max-width: 560px;
 }
 
 .hero-content h1 {
   font-size: clamp(2.6rem, 5vw, 4.2rem);
-  margin: 20px 0 36px;
-  line-height: 1.05;
+  margin: 0 0 36px;
+  line-height: 1.15;
+  font-optical-sizing: auto;
 }
 
 /* ------------------------------------------------------------
@@ -343,7 +309,7 @@ h1, h2, h3 {
 }
 
 .teaser-label {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: -0.01em;
@@ -380,7 +346,7 @@ h1, h2, h3 {
 .quote-band cite {
   display: block;
   margin-top: 28px;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   font-style: normal;
   font-weight: 400;
   font-size: 0.7rem;
