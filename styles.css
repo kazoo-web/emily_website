@@ -1,22 +1,22 @@
 /* ============================================================
    Emily Iscoff-Daigian — Executive Coaching Site
-   Design system per brief
    ============================================================ */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Spectral:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Spectral:ital,wght@1,300&display=swap');
 
 /* ------------------------------------------------------------
    Custom Properties
    ------------------------------------------------------------ */
 :root {
-  --dark-earth:    #1E1A10;
-  --terracotta:    #A05C34;
-  --coastal-sage:  #4A7068;
-  --deep-teal:     #3A4E48;
-  --linen:         #F4F0E8;
-  --warm-sand:     #EDE8DE;
-  --border:        0.5px solid #D8D0C0;
+  --dark-earth:   #1E1A10;
+  --body-text:    #3A3020;
+  --nav-link:     #3A3428;
+  --terracotta:   #A05C34;
+  --coastal-sage: #4A7068;
+  --deep-teal:    #3A4E48;
+  --linen:        #F4F0E8;
+  --warm-sand:    #EDE8DE;
+  --border:       0.5px solid #D8D0C0;
 }
 
 /* ------------------------------------------------------------
@@ -31,15 +31,16 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-x: clip; /* clip, not hidden — avoids creating a scroll container */
+  overflow-x: clip;
 }
 
 body {
   background-color: var(--linen);
-  color: var(--dark-earth);
-  font-family: 'Bodoni Moda', serif;
+  color: var(--body-text);
+  font-family: 'Syne', sans-serif;
   font-weight: 400;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,15 +56,24 @@ a {
 }
 
 /* ------------------------------------------------------------
-   Typography helpers
+   Typography
    ------------------------------------------------------------ */
-h1, h2, h3 {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
   color: var(--dark-earth);
-  font-optical-sizing: auto;
+}
+
+h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: var(--dark-earth);
 }
 
 .italic-accent {
@@ -71,16 +81,7 @@ h1, h2, h3 {
   font-weight: 300;
   font-style: italic;
   color: var(--terracotta);
-  font-size: 1.08em;
-}
-
-.eyebrow {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--coastal-sage);
+  font-size: 1.1em;
 }
 
 /* ------------------------------------------------------------
@@ -90,14 +91,13 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 56px 24px;
+  padding: 20px 56px 22px;
   background: var(--linen);
   position: sticky;
   top: 0;
   z-index: 200;
 }
 
-/* Border as pseudo-element so it is never in the text's line box */
 .site-nav::after {
   content: '';
   position: absolute;
@@ -109,10 +109,9 @@ h1, h2, h3 {
 }
 
 .nav-logo {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
   color: var(--dark-earth);
   text-decoration: none;
   white-space: nowrap;
@@ -122,17 +121,17 @@ h1, h2, h3 {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
   list-style: none;
 }
 
 .nav-links a {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  font-size: 0.72rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--dark-earth);
+  letter-spacing: 0.04em;
+  color: var(--nav-link);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -172,21 +171,15 @@ h1, h2, h3 {
   transition: all 0.25s ease;
 }
 
-.hamburger.open span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
+.hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* Mobile menu */
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 65px;
+  top: 63px;
   left: 0;
   right: 0;
   background: var(--linen);
@@ -195,44 +188,37 @@ h1, h2, h3 {
   z-index: 199;
 }
 
-.mobile-menu.open {
-  display: block;
-}
+.mobile-menu.open { display: block; }
 
 .mobile-menu a {
   display: block;
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  font-size: 0.78rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--dark-earth);
+  letter-spacing: 0.04em;
+  color: var(--nav-link);
   text-decoration: none;
   padding: 16px 24px;
   border-bottom: var(--border);
   transition: color 0.2s;
 }
 
-.mobile-menu a:last-child {
-  border-bottom: none;
-}
-
-.mobile-menu a:hover {
-  color: var(--terracotta);
-}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu a:hover { color: var(--terracotta); }
 
 /* ------------------------------------------------------------
-   Buttons
+   Buttons & Links
    ------------------------------------------------------------ */
 .btn {
   display: inline-block;
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 400;
-  font-size: 0.72rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-decoration: none;
-  padding: 14px 32px;
+  padding: 14px 28px;
   border-radius: 1px;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
@@ -260,248 +246,222 @@ h1, h2, h3 {
   border-color: var(--terracotta);
 }
 
+.text-link {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--coastal-sage);
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--coastal-sage);
+  padding-bottom: 2px;
+  display: inline-block;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.text-link:hover {
+  color: var(--terracotta);
+  border-color: var(--terracotta);
+}
+
 /* ------------------------------------------------------------
-   Hero — Landing page
+   Orb treatment (shared across all pages)
+   ------------------------------------------------------------ */
+.orb-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb-layer-1 {
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(ellipse at 65% 40%, rgba(100,150,138,0.22) 0%, transparent 60%);
+  filter: blur(40px);
+}
+
+.orb-layer-2 {
+  position: absolute;
+  top: -80px;
+  left: 30%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 42% 38%, #F0C880 0%, #C07830 38%, #7A3E18 65%, transparent 88%);
+  opacity: 0.36;
+  filter: blur(70px);
+}
+
+.orb-layer-3 {
+  position: absolute;
+  top: 20px;
+  left: 52%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FDF4E0 0%, #F0D8A0 55%, transparent 100%);
+  opacity: 0.38;
+  filter: blur(40px);
+}
+
+/* ------------------------------------------------------------
+   Landing page — two-column hero
    ------------------------------------------------------------ */
 .hero {
-  min-height: 88vh;
+  position: relative;
+  overflow: hidden;
+  padding: 72px 56px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 72px;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+  border-bottom: var(--border);
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
-  padding: 80px 56px;
-  background:
-    radial-gradient(ellipse 85% 130% at 100% 50%, #C8924A 0%, #DDB46A 20%, #EDD098 45%, transparent 70%),
-    radial-gradient(ellipse 55% 90% at 95% 5%, rgba(200, 140, 55, 0.45) 0%, transparent 55%),
-    #F0E8DA;
+  justify-content: center;
 }
 
-.hero-content {
-  max-width: 560px;
-}
-
-.hero-content h1 {
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  margin: 0 0 36px;
-  line-height: 1.15;
-  font-optical-sizing: auto;
-}
-
-/* ------------------------------------------------------------
-   Below-fold page teasers
-   ------------------------------------------------------------ */
-.page-teasers {
-  padding: 80px 56px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.teasers-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.teaser-item {
-  padding: 40px 48px 40px 0;
-}
-
-.teaser-item + .teaser-item {
-  padding-left: 48px;
-  border-left: var(--border);
-}
-
-.teaser-label {
-  font-family: 'Bodoni Moda', serif;
-  font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: -0.01em;
-  margin-bottom: 10px;
-  color: var(--dark-earth);
-}
-
-.teaser-desc {
-  font-size: 0.88rem;
-  line-height: 1.65;
-  color: var(--dark-earth);
-  opacity: 0.65;
-}
-
-/* ------------------------------------------------------------
-   Quote band
-   ------------------------------------------------------------ */
-.quote-band {
-  background: var(--deep-teal);
-  padding: 88px 56px;
-}
-
-.quote-band blockquote {
-  max-width: 680px;
-  margin: 0 auto;
-  font-family: 'Spectral', serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
-  color: var(--linen);
-  line-height: 1.55;
-}
-
-.quote-band cite {
-  display: block;
-  margin-top: 28px;
-  font-family: 'Bodoni Moda', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(244, 240, 232, 0.5);
-}
-
-/* ------------------------------------------------------------
-   Dividers
-   ------------------------------------------------------------ */
-.site-divider {
-  border: none;
-  border-top: var(--border);
-  margin: 0 56px;
-}
-
-/* ------------------------------------------------------------
-   Page header (inner pages)
-   ------------------------------------------------------------ */
-.page-header {
-  padding: 88px 56px 48px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.page-header h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-  margin-top: 20px;
-  line-height: 1.06;
-}
-
-/* ------------------------------------------------------------
-   About page
-   ------------------------------------------------------------ */
-.about-narrative {
-  padding: 0 56px 72px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.about-narrative p {
-  font-size: 1.05rem;
-  line-height: 1.82;
-  margin-bottom: 28px;
-  color: var(--dark-earth);
-}
-
-.about-narrative p:last-child {
-  margin-bottom: 0;
-}
-
-.headshot-wrap {
-  padding: 0 56px 80px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.headshot-wrap img {
-  width: 100%;
-  max-height: 620px;
+.hero-headshot {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 8%;
+  display: block;
 }
 
-.credentials {
-  padding: 56px 56px 88px;
-  max-width: 720px;
-  margin: 0 auto;
-  border-top: var(--border);
+.headshot-placeholder {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #D8D0C0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.credentials p {
-  font-size: 0.9rem;
-  line-height: 1.75;
-  color: var(--dark-earth);
-  opacity: 0.7;
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  line-height: 1.15;
+  margin-bottom: 28px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--body-text);
   margin-bottom: 16px;
 }
 
-.credentials p:last-child {
+.hero-text .text-link {
+  margin-top: 12px;
+}
+
+/* ------------------------------------------------------------
+   Inner page header (orb zone)
+   ------------------------------------------------------------ */
+.page-header {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 56px 56px;
+  border-bottom: var(--border);
+}
+
+.page-header h1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------
+   Page body (inner pages)
+   ------------------------------------------------------------ */
+.page-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 40px 88px;
+}
+
+.page-body p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--body-text);
+  margin-bottom: 20px;
+}
+
+.page-body p:last-child {
   margin-bottom: 0;
 }
 
-/* ------------------------------------------------------------
-   Services & Approach page
-   ------------------------------------------------------------ */
-.services-intro {
-  padding: 0 56px 64px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.services-intro p {
-  font-size: 1.05rem;
-  line-height: 1.82;
-}
-
-.offering {
-  padding: 56px 56px;
-  max-width: 720px;
-  margin: 0 auto;
+/* Content sections (services / approach) */
+.content-section {
+  margin-top: 44px;
+  padding-top: 44px;
   border-top: var(--border);
 }
 
-.offering h3 {
-  font-size: 1rem;
-  letter-spacing: 0.01em;
-  margin-bottom: 14px;
-  color: var(--dark-earth);
+.content-section:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 
-.offering p {
-  font-size: 1rem;
-  line-height: 1.82;
-  color: var(--dark-earth);
-  opacity: 0.75;
+.content-section h2 {
+  margin-bottom: 20px;
 }
 
-.services-cta-wrap {
-  padding: 64px 56px 88px;
-  max-width: 720px;
-  margin: 0 auto;
+.content-section p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--body-text);
+  margin-bottom: 16px;
+}
+
+.content-section p:last-child {
+  margin-bottom: 0;
+}
+
+.content-section ul {
+  margin: 0 0 16px 0;
+  padding-left: 18px;
+}
+
+.content-section ul li {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--body-text);
+  margin-bottom: 4px;
+}
+
+/* CTA row at bottom of page body */
+.page-cta {
+  margin-top: 48px;
+  padding-top: 48px;
   border-top: var(--border);
-}
-
-/* ------------------------------------------------------------
-   Contact page
-   ------------------------------------------------------------ */
-.contact-section {
-  padding: 0 56px 88px;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.contact-section p {
-  font-size: 1.05rem;
-  line-height: 1.82;
-  margin-bottom: 48px;
-  color: var(--dark-earth);
 }
 
 /* ------------------------------------------------------------
    Footer
    ------------------------------------------------------------ */
 .site-footer {
-  padding: 32px 56px;
+  padding: 28px 56px;
   border-top: var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .site-footer p {
-  font-size: 0.72rem;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--dark-earth);
@@ -509,11 +469,11 @@ h1, h2, h3 {
 }
 
 /* ------------------------------------------------------------
-   Responsive — mobile
+   Responsive
    ------------------------------------------------------------ */
 @media (max-width: 768px) {
   .site-nav {
-    padding: 18px 24px;
+    padding: 18px 24px 20px;
   }
 
   .nav-links {
@@ -525,55 +485,33 @@ h1, h2, h3 {
   }
 
   .mobile-menu {
-    top: 57px;
+    top: 59px;
   }
 
   .hero {
-    padding: 64px 24px 72px;
-    min-height: auto;
-  }
-
-  .page-teasers,
-  .quote-band,
-  .page-header,
-  .about-narrative,
-  .headshot-wrap,
-  .credentials,
-  .services-intro,
-  .offering,
-  .services-cta-wrap,
-  .contact-section {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .site-divider {
-    margin: 0 24px;
-  }
-
-  .teasers-grid {
     grid-template-columns: 1fr;
+    padding: 48px 24px 64px;
+    min-height: auto;
+    gap: 36px;
   }
 
-  .teaser-item {
-    padding: 36px 0;
-    border-bottom: var(--border);
+  .hero-photo {
+    justify-content: flex-start;
   }
 
-  .teaser-item + .teaser-item {
-    padding-left: 0;
-    border-left: none;
-    border-bottom: var(--border);
+  .page-header {
+    padding: 48px 24px 40px;
   }
 
-  .teaser-item:last-child {
-    border-bottom: none;
+  .page-header h1 {
+    font-size: 36px;
+  }
+
+  .page-body {
+    padding: 40px 24px 64px;
   }
 
   .site-footer {
-    padding: 28px 24px;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
+    padding: 24px 24px;
   }
 }
