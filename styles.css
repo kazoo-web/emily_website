@@ -2,7 +2,7 @@
    Emily Iscoff-Daigian — Executive Coaching Site
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Spectral:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Spectral:ital,wght@1,300&display=swap');
 
 /* ------------------------------------------------------------
    Custom Properties
@@ -37,7 +37,7 @@ html {
 body {
   background-color: var(--linen);
   color: var(--body-text);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.85;
@@ -59,7 +59,7 @@ a {
    Typography
    ------------------------------------------------------------ */
 h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 800;
   font-size: 48px;
   letter-spacing: -0.02em;
@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 22px;
   letter-spacing: -0.01em;
@@ -109,7 +109,7 @@ h2 {
 }
 
 .nav-logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 17px;
   color: var(--dark-earth);
@@ -126,7 +126,7 @@ h2 {
 }
 
 .nav-links a {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ h2 {
 
 .mobile-menu a {
   display: block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -212,7 +212,7 @@ h2 {
    ------------------------------------------------------------ */
 .btn {
   display: inline-block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
@@ -247,7 +247,7 @@ h2 {
 }
 
 .text-link {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 11px;
   text-transform: uppercase;
