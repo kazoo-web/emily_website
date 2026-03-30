@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+/* Remove focus outline on mouse click, keep for keyboard navigation */
+a:focus { outline: none; }
+a:focus-visible { outline: 2px solid var(--coastal-sage); outline-offset: 3px; }
+
 /* ------------------------------------------------------------
    Typography
    ------------------------------------------------------------ */
