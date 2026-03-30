@@ -55,8 +55,10 @@ a {
   text-decoration: none;
 }
 
-/* Remove focus outline on links */
-a:focus, a:focus-visible { outline: none; }
+/* Remove focus outlines on all interactive elements */
+a:focus, a:focus-visible,
+button:focus, button:focus-visible,
+nav:focus, nav:focus-visible { outline: none; }
 
 /* ------------------------------------------------------------
    Typography
@@ -164,6 +166,7 @@ h2 {
   background: none;
   border: none;
   padding: 4px;
+  outline: none;
 }
 
 .hamburger span {
