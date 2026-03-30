@@ -1,3 +1,8 @@
+// Blur nav links on click to prevent Chrome focus ring flash
+document.querySelectorAll('.site-nav a, .nav-logo').forEach(function (el) {
+  el.addEventListener('mousedown', function () { this.blur(); });
+});
+
 // Mobile nav toggle
 (function () {
   const hamburger = document.querySelector('.hamburger');
