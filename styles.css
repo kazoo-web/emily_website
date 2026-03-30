@@ -53,6 +53,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Remove focus outlines on all interactive elements */
