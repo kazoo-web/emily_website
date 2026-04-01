@@ -319,18 +319,23 @@ h2 {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 72px 56px;
+  padding: 72px 56px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  border-bottom: var(--border);
+}
+
+.hero-main {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 72px;
   align-items: center;
-  min-height: calc(100vh - 64px);
-  border-bottom: var(--border);
 }
 
 .hero-photo {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -460,21 +465,23 @@ h2 {
 }
 
 /* ------------------------------------------------------------
-   Services preview (landing page)
+   Services preview (landing page, inside hero orb zone)
    ------------------------------------------------------------ */
 .services-preview {
-  padding: 72px 56px 80px;
+  position: relative;
+  z-index: 1;
   border-top: var(--border);
+  padding-top: 64px;
 }
 
-.services-preview-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+.services-preview-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+  color: var(--dark-earth);
+  text-align: center;
   margin-bottom: 40px;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .services-preview-grid {
@@ -563,9 +570,12 @@ h2 {
   }
 
   .hero {
-    grid-template-columns: 1fr;
     padding: 48px 24px 64px;
-    min-height: auto;
+    gap: 48px;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr;
     gap: 36px;
   }
 
@@ -586,11 +596,7 @@ h2 {
   }
 
   .services-preview {
-    padding: 56px 24px 64px;
-  }
-
-  .services-preview-header {
-    margin-bottom: 28px;
+    padding-top: 40px;
   }
 
   .services-preview-grid {
