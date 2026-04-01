@@ -468,7 +468,14 @@ h2 {
 .services-preview {
   position: relative;
   z-index: 1;
-  padding: 72px 56px 80px;
+}
+
+.offerings-header {
+  position: relative;
+  z-index: 2;
+  background: var(--deep-teal);
+  padding: 64px 56px 60px;
+  text-align: center;
 }
 
 .services-preview-title {
@@ -476,9 +483,12 @@ h2 {
   font-weight: 800;
   font-size: 44px;
   letter-spacing: -0.02em;
-  color: var(--dark-earth);
-  text-align: center;
-  margin-bottom: 56px;
+  color: var(--linen);
+  margin: 0;
+}
+
+.services-preview-grid-wrap {
+  padding: 64px 56px 80px;
 }
 
 .services-preview-grid {
@@ -590,8 +600,12 @@ h2 {
     padding: 40px 24px 64px;
   }
 
-  .services-preview {
-    padding: 48px 24px 64px;
+  .offerings-header {
+    padding: 48px 24px 44px;
+  }
+
+  .services-preview-grid-wrap {
+    padding: 40px 24px 56px;
   }
 
   .services-preview-grid {
