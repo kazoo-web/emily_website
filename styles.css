@@ -331,7 +331,6 @@ h2 {
   grid-template-columns: 300px 1fr;
   gap: 72px;
   align-items: center;
-  border-bottom: var(--border);
 }
 
 .hero-photo {
@@ -475,11 +474,11 @@ h2 {
 .services-preview-title {
   font-family: 'Inter', sans-serif;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 44px;
   letter-spacing: -0.02em;
   color: var(--dark-earth);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
 }
 
 .services-preview-grid {
