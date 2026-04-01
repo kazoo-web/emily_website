@@ -316,23 +316,22 @@ h2 {
 /* ------------------------------------------------------------
    Landing page — two-column hero
    ------------------------------------------------------------ */
-.hero {
+/* Orb wrapper shared by hero + offerings */
+.hero-wrapper {
   position: relative;
   overflow: hidden;
-  padding: 72px 56px 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 72px;
   border-bottom: var(--border);
 }
 
-.hero-main {
+.hero {
   position: relative;
   z-index: 1;
+  padding: 72px 56px;
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 72px;
   align-items: center;
+  border-bottom: var(--border);
 }
 
 .hero-photo {
@@ -465,13 +464,12 @@ h2 {
 }
 
 /* ------------------------------------------------------------
-   Services preview (landing page, inside hero orb zone)
+   Services preview (landing page, shares orb with hero)
    ------------------------------------------------------------ */
 .services-preview {
   position: relative;
   z-index: 1;
-  border-top: var(--border);
-  padding-top: 64px;
+  padding: 72px 56px 80px;
 }
 
 .services-preview-title {
@@ -570,12 +568,8 @@ h2 {
   }
 
   .hero {
-    padding: 48px 24px 64px;
-    gap: 48px;
-  }
-
-  .hero-main {
     grid-template-columns: 1fr;
+    padding: 48px 24px 56px;
     gap: 36px;
   }
 
@@ -596,7 +590,7 @@ h2 {
   }
 
   .services-preview {
-    padding-top: 40px;
+    padding: 48px 24px 64px;
   }
 
   .services-preview-grid {
